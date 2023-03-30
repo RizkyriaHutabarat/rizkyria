@@ -9,8 +9,8 @@ github.com/Azure/azure-sdk-for-go/sdk/internal v1.0.0/go.mod h1:eWRD7oawr1Mu1sLC
 github.com/AzureAD/microsoft-authentication-library-for-go v0.5.1/go.mod h1:Vt9sXTKwMyGcOxSmLDMnGPgqsUg7m8pe215qMLrDXw4=
 github.com/aiteung/atapi v0.0.10 h1:n2UpykaSIlFrdfrEaTU27/y1gXZ0KMAJLypNH4eb+so=
 github.com/aiteung/atapi v0.0.10/go.mod h1:WRmSafqlDpo8PqT1NxoobjVEXkk7vJ6fj7bzh0MTzkM=
-github.com/aiteung/atdb v0.0.7 h1:DZ5m6n5kAHFNrggnEG2B3UawXJ+flMdsHP4JCgKGk5s=
-github.com/aiteung/atdb v0.0.7/go.mod h1:LpKJzlCiFzTCiIsRTO3olNTnP4dzrt0KB/hxUVicoqs=
+github.com/aiteung/atdb v0.0.9 h1:NpkLAdOJvFnZlNiYWqKFtWtRi0YWG2kFmWPwEzgiSQA=
+github.com/aiteung/atdb v0.0.9/go.mod h1:LpKJzlCiFzTCiIsRTO3olNTnP4dzrt0KB/hxUVicoqs=
 github.com/aiteung/atmessage v0.0.17 h1:p7vuwqbww6q85sQfQB5Ade3hpoL7u3yAEbvE7YviAWI=
 github.com/aiteung/atmessage v0.0.17/go.mod h1:C58WNBo2IHwsdOcWhJrVDH5usDdWYhTm2yJmjYCEQJ8=
 github.com/aiteung/atmodel v0.0.2 h1:eAQ+yKP1trqWi3cot+1b33Av/dkK9+1+tsO0aZAsUTM=
@@ -102,6 +102,8 @@ github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZN
 github.com/rivo/uniseg v0.2.0/go.mod h1:J6wj4VEh+S6ZtnVlnTBMWIodfgj8LQOQFoIToxlJtxc=
 github.com/rivo/uniseg v0.4.4 h1:8TfxU8dW6PdqD27gjM8MVNuicgxIjxpm4K7x4jp8sis=
 github.com/rivo/uniseg v0.4.4/go.mod h1:FN3SvrM+Zdj16jyLfmOkMNblXMcoc8DfTHruCPUcx88=
+github.com/rizkyriahutabarat/be_profile v0.0.4 h1:6A9CBwNXr2G5bMJmUBnwFC69va1eeA9ZTlLzIuun/Kk=
+github.com/rizkyriahutabarat/be_profile v0.0.4/go.mod h1:UpdxfRC7Z/Zee1mVTiHVt0Tw2XftOJMVPl39XZOwHpk=
 github.com/rogpeppe/go-internal v1.9.0 h1:73kH8U+JUqXU8lRuOHeVHaa/SZPifC7BkcraZVejAe8=
 github.com/savsgio/dictpool v0.0.0-20221023140959-7bf2e61cea94 h1:rmMl4fXJhKMNWl+K+r/fq4FbbKI+Ia2m9hYBLm2h4G4=
 github.com/savsgio/dictpool v0.0.0-20221023140959-7bf2e61cea94/go.mod h1:90zrgN3D/WJsDd1iXHT96alCoN2KJo6/4x1DZC3wZs8=
