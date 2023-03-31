@@ -1,13 +1,18 @@
 package controller
 
 import(
+	"errors"
+	"fmt"
 	inimodel "github.com/rizkyriahutabarat/be_profile/model"
 	inimodul "github.com/rizkyriahutabarat/be_profile/module"
+	inimodullatihan "github.com/indrariksa/be_presensi/module"
 	"github.com/rizkyriahutabarat/rizkyria/config"
 	cek "github.com/aiteung/presensi"
 	"github.com/gofiber/fiber/v2"
 	"net/http"
 	"github.com/aiteung/musik"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/mongo"
 
 )
 
@@ -151,3 +156,38 @@ func InsertProfile(c *fiber.Ctx) error {
 	})
 }
 
+func GetAllPresensi(c *fiber.Ctx) error {
+	ps := inimodullatihan.GetAllPresensi(config.Ulbimongoconn, "presensi")
+	return c.JSON(ps)
+}
+
+func GetPresensiID(c *fiber.Ctx) error {
+	id := c.Params("id")
+	if id == "" {
+		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
+			"status":  http.StatusInternalServerError,
+			"message": "Wrong parameter",
+		})
+	}
+	objID, err := primitive.ObjectIDFromHex(id)
+	if err != nil {
+		return c.Status(http.StatusBadRequest).JSON(fiber.Map{
+			"status":  http.StatusBadRequest,
+			"message": "Invalid id parameter",
+		})
+	}
+	ps, err := inimodullatihan.GetPresensiFromID(objID, config.Ulbimongoconn, "presensi")
+	if err != nil {
+		if errors.Is(err, mongo.ErrNoDocuments) {
+			return c.Status(http.StatusNotFound).JSON(fiber.Map{
+				"status":  http.StatusNotFound,
+				"message": fmt.Sprintf("No data found for id %s", id),
+			})
+		}
+		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
+			"status":  http.StatusInternalServerError,
+			"message": fmt.Sprintf("Error retrieving data for id %s", id),
+		})
+	}
+	return c.JSON(ps)
+}
