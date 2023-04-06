@@ -104,8 +104,8 @@ github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZN
 github.com/rivo/uniseg v0.2.0/go.mod h1:J6wj4VEh+S6ZtnVlnTBMWIodfgj8LQOQFoIToxlJtxc=
 github.com/rivo/uniseg v0.4.4 h1:8TfxU8dW6PdqD27gjM8MVNuicgxIjxpm4K7x4jp8sis=
 github.com/rivo/uniseg v0.4.4/go.mod h1:FN3SvrM+Zdj16jyLfmOkMNblXMcoc8DfTHruCPUcx88=
-github.com/rizkyriahutabarat/be_profile v0.0.4 h1:6A9CBwNXr2G5bMJmUBnwFC69va1eeA9ZTlLzIuun/Kk=
-github.com/rizkyriahutabarat/be_profile v0.0.4/go.mod h1:UpdxfRC7Z/Zee1mVTiHVt0Tw2XftOJMVPl39XZOwHpk=
+github.com/rizkyriahutabarat/be_profile v0.0.8 h1:ulb+CsfTcqIgcDlEtzs4ivFgJXlfDpWvBfhwdGxgEbs=
+github.com/rizkyriahutabarat/be_profile v0.0.8/go.mod h1:UpdxfRC7Z/Zee1mVTiHVt0Tw2XftOJMVPl39XZOwHpk=
 github.com/rogpeppe/go-internal v1.9.0 h1:73kH8U+JUqXU8lRuOHeVHaa/SZPifC7BkcraZVejAe8=
 github.com/savsgio/dictpool v0.0.0-20221023140959-7bf2e61cea94 h1:rmMl4fXJhKMNWl+K+r/fq4FbbKI+Ia2m9hYBLm2h4G4=
 github.com/savsgio/dictpool v0.0.0-20221023140959-7bf2e61cea94/go.mod h1:90zrgN3D/WJsDd1iXHT96alCoN2KJo6/4x1DZC3wZs8=

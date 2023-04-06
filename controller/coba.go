@@ -37,33 +37,38 @@ func GetPresensiold(c *fiber.Ctx) error {
 
 
 func GetUser(c *fiber.Ctx) error {
-	nl := inimodul.GetUserFromEmail("kia12@gmail.com", config.Ulbimongoconn, "user")
+	nl := inimodul.GetUserFromEmail("marlina@gmail.com", config.Ulbimongoconn, "user")
 	return c.JSON(nl)
 }
 
 
 func GetPendidikan(c *fiber.Ctx) error {
-	nl := inimodul.GetPendidikanFromSekolah("ulbi", config.Ulbimongoconn, "pendidikan")
+	nl := inimodul.GetPendidikanFromSekolah("ULBI", config.Ulbimongoconn, "pendidikan")
 	return c.JSON(nl)
 }
 
 func GetPengalaman(c *fiber.Ctx) error {
-	nl := inimodul.GetPengalamanFromJabatan("CEO", config.Ulbimongoconn, "pengalaman")
+	nl := inimodul.GetPengalamanFromJabatan("Mahasiswa Magang", config.Ulbimongoconn, "pengalaman")
 	return c.JSON(nl)
 }
 func GetSkill(c *fiber.Ctx) error {
-	nl := inimodul.GetSkillFromNama("go", config.Ulbimongoconn, "skill")
+	nl := inimodul.GetSkillFromNama("Java", config.Ulbimongoconn, "skill")
 	return c.JSON(nl)
 }
 func GetProfile(c *fiber.Ctx) error {
-	nl := inimodul.GetProfileFromNama_user("Rizkyria", config.Ulbimongoconn, "profile")
+	nl := inimodul.GetProfileFromNama_user("Marlina", config.Ulbimongoconn, "profile")
+	return c.JSON(nl)
+}
+func GetAllProfile(c *fiber.Ctx) error {
+	nl := inimodul.GetAllProfile(config.Ulbimongoconn, "profile")
 	return c.JSON(nl)
 }
 
-func GetAll(c *fiber.Ctx) error {
-	nl := inimodul.GetAllProfileFromNama_user("kia", config.Ulbimongoconn, "profile")
-	return c.JSON(nl)
-}
+
+// func GetAll(c *fiber.Ctx) error {
+// 	nl := inimodul.GetAllProfileFromNama_user("Rizkyria", config.Ulbimongoconn, "profile")
+// 	return c.JSON(nl)
+// }
 
 
 func InsertUser(c *fiber.Ctx) error {
@@ -191,3 +196,9 @@ func GetPresensiID(c *fiber.Ctx) error {
 	}
 	return c.JSON(ps)
 }
+
+// func GetAllProfile(c *fiber.Ctx) error {
+// 	ps := inimodul.GetAllProfile(config.Ulbimongoconn, "profile")
+// 	return c.JSON(ps)
+// }
+
