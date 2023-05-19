@@ -6,6 +6,8 @@ import(
 	inimodel "github.com/rizkyriahutabarat/be_profile/model"
 	inimodul "github.com/rizkyriahutabarat/be_profile/module"
 	inimodullatihan "github.com/indrariksa/be_presensi/module"
+	tuhmodel "github.com/indrariksa/be_presensi/model"
+	tuhmodul "github.com/indrariksa/be_presensi/module"
 	"github.com/rizkyriahutabarat/rizkyria/config"
 	cek "github.com/aiteung/presensi"
 	"github.com/gofiber/fiber/v2"
@@ -201,4 +203,33 @@ func GetPresensiID(c *fiber.Ctx) error {
 // 	ps := inimodul.GetAllProfile(config.Ulbimongoconn, "profile")
 // 	return c.JSON(ps)
 // }
+
+func InsertData(c *fiber.Ctx) error {
+	db := config.Ulbimongoconn
+	var presensi tuhmodel.Presensi
+	if err := c.BodyParser(&presensi); err != nil {
+		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err.Error(),
+		})
+	}
+	insertedID, err := tuhmodul.InsertPresensi(db, "presensi",
+		presensi.Longitude,
+		presensi.Latitude,
+		presensi.Location,
+		presensi.Phone_number,
+		presensi.Checkin,
+		presensi.Biodata)
+	if err != nil {
+		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err.Error(),
+		})
+	}
+	return c.Status(http.StatusOK).JSON(fiber.Map{
+		"status":      http.StatusOK,
+		"message":     "Data berhasil disimpan.",
+		"inserted_id": insertedID,
+	})
+}
 
