@@ -1,4 +1,15 @@
+basePath: /
+host: hutabarat.herokuapp.com
 info:
-  contact: {}
+  contact:
+    email: 1214023@std.ulbi.ac.id
+    name: API Support
+    url: http://github.com/rizkyriahutabarat/
+  description: This is a sample server.
+  title: TES SWAG
+  version: "1.0"
 paths: {}
+schemes:
+- https
+- http
 swagger: "2.0"

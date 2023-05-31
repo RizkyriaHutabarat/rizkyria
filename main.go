@@ -16,6 +16,18 @@ import (
 	
 
 	_ "github.com/rizkyriahutabarat/rizkyria/docs"
+
+// @title TES SWAG
+// @version 1.0
+// @description This is a sample server.
+
+// @contact.name API Support
+// @contact.url http://github.com/rizkyriahutabarat/
+// @contact.email 1214023@std.ulbi.ac.id
+
+// @host hutabarat.herokuapp.com
+// @BasePath /
+// @schemes https http
 )
 
 func main() {
