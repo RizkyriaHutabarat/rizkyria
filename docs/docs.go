@@ -175,7 +175,7 @@ const docTemplate = `{
             "properties": {
                 "_id": {
                     "type": "string",
-                    "example": "123456789"
+                    "example": "123456789145632897653456"
                 },
                 "hari_kerja": {
                     "type": "array",
@@ -217,7 +217,7 @@ const docTemplate = `{
             "properties": {
                 "_id": {
                     "type": "string",
-                    "example": "123456789"
+                    "example": "123456789145632897653456"
                 },
                 "biodata": {
                     "$ref": "#/definitions/controller.Karyawan"
