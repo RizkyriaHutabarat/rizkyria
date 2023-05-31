@@ -15,7 +15,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	
 
-	"github.com/rizkyriahutabarat/rizkyria/docs"
+	_ "github.com/rizkyriahutabarat/rizkyria/docs"
 )
 
 func main() {
